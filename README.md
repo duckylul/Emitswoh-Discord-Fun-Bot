@@ -22,7 +22,7 @@
 <br />
 
 - **Q: Where can I find the default configuration?**
-- A: [Default Configuration] ot avaliable currently
+- A: [Default Configuration] Not avaliable currently
 
 <br />
 
