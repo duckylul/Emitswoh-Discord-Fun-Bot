@@ -88,4 +88,4 @@ async def on_message(message:discord.Message):
             return       
 
 
-bot.run('OTA1NjEzMTUxMjYzOTE2MDgz.YYMn-A.hueeLnaRNPlx7J5NbBWQOHLHxzg')
+bot.run(TOKEN)
