@@ -80,7 +80,7 @@ async def noobquestion(ctx):
 @bot.command()
 async def profile_in(ctx, member:discord.Member):
             embed = discord.Embed()
-            embed.set_author(name=f"User Info" - {member})  
+             
 
             embed.set_image(url=member.avatar_url)
 
