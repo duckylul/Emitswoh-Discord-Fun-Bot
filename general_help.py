@@ -5,14 +5,14 @@ import time
 from datetime import datetime
 
 
-class help(commands.Cog):
+class general_help(commands.Cog):
     """Help commands"""
 
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
     @commands.command(name="ghelp") 
-    async def general_help(self, ctx: commands.Context):
+    async def general_helps(self, ctx: commands.Context):
         embed = discord.Embed(title="List of helps", description="Below are some help commands for different section.", colour=0x87CEEB, timestamp=datetime.utcnow())
         embed.set_author(name="Ducky", icon_url="https://cdn.discordapp.com/emojis/720361366900310047.png?size=128")
         embed.add_field(name="!g_help", value="A help that cotains general commands that bots have!", inline=False)
@@ -23,17 +23,7 @@ class help(commands.Cog):
 
 
         await ctx.send(embed=embed)
-    
 
-    @commands.command(name="info_help") 
-    async def general_help(self, ctx: commands.Context):
-        info_embed = discord.Embed(title="Emitswoh's Fun Help", description="**Fun** and **Funny** features this noob bot can do!!", colour=0x87CEEB, timestamp=datetime.utcnow()) 
-
-        await ctx.send(info_embed=info_embed)
-    
-    
-    
 
 def setup(bot: commands.Bot):
-    bot.add_cog(help(bot))
-
+    bot.add_cog(general_help(bot))

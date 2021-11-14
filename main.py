@@ -35,7 +35,10 @@ bot.load_extension("ping")
 
 bot.load_extension("snipe")
 
-bot.load_extension("help")
+bot.load_extension("general_help")
+
+bot.load_extension("info_help")
+
 
 
 
