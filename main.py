@@ -1,3 +1,4 @@
+
 #emitswoh
 from discord.ext import commands
 import discord
@@ -5,6 +6,7 @@ import string
 import sys
 import asyncio
 import random
+import os
 
 bot = commands.Bot(command_prefix="!")
 
@@ -86,6 +88,6 @@ async def on_message(message:discord.Message):
            await message.channel.send(r_noob_hello)
         else:
             return       
+my_secret = os.environ['TOKEN']
 
-
-bot.run(TOKEN)
+bot.run(my_secret)
