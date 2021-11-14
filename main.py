@@ -8,15 +8,26 @@ import asyncio
 import random
 import os
 
+
+random_messages = ['Why you bully me?', 'Talk RIGHT NOW', 'Who likes Donald Trump here??', "How many chickens would it take to kill an elephant?", "mrbeast"]
+
+@tasks.loop(minutes=1.3)
+async def test(channel):
+    n_random_messages = random.choice(random_messages)
+    await channel.send(n_random_messages)
+
+
+
 bot = commands.Bot(command_prefix="!")
 
-channel_id = 905612759998296169
 
 noob_emo = '<:noob:908513174972674068>'
 
 @bot.event
 async def on_ready():
     print(f"{bot.user} is ready! Go emitswohs!!")
+    channel = bot.get_channel(905612759998296169)
+    test.start(channel=channel)
 
 bot.load_extension("setstatus")
 
@@ -79,6 +90,16 @@ async def profile_info(ctx, member: discord.Member):
   
   await ctx.send(embed=embed)
 
+
+@bot.command()
+async def profile_in(ctx, member:discord.Member):
+            embed = discord.Embed()
+            embed.set_image(url=member.avatar_url)
+
+            embed.set_footer(text=f"Requested by {ctx.author}",icon_url=ctx.author.avatar_url)
+
+            await ctx.send(embed=embed)
+
         
 @bot.event
 async def on_message(message:discord.Message):
@@ -93,14 +114,11 @@ async def on_message(message:discord.Message):
 
 
 
-@tasks.loop(seconds=2)
-async def active_message():
-  message_channel = bot.get_channel(channel_id)
-  
-  
-  a_noob_hello = random.choice(answer_hello)
 
-  await message_channel.send(a_noob_hello)
+
+
+
+
 
 
 my_secret = os.environ['TOKEN']
