@@ -27,9 +27,9 @@ class help(commands.Cog):
 
     @commands.command(name="info_help") 
     async def general_help(self, ctx: commands.Context):
-        embed = discord.Embed(title="Emitswoh's Fun Help", description="**Fun** and **Funny** features this noob bot can do!!", colour=0x87CEEB, timestamp=datetime.utcnow()) 
+        info_embed = discord.Embed(title="Emitswoh's Fun Help", description="**Fun** and **Funny** features this noob bot can do!!", colour=0x87CEEB, timestamp=datetime.utcnow()) 
 
-        await ctx.send(embed=embed)
+        await ctx.send(info_embed=info_embed)
     
     
     

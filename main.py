@@ -74,26 +74,14 @@ async def noobquestion(ctx):
         
 
 
-@bot.command()
-async def profile_info(ctx, member: discord.Member):
-  #await ctx.send(f"Your account was created at {ctx.author.created_at}")
-  
-  roles = [role for role in member.roles]
 
-  info_embed = discord.Embed(colour=member.color, timestamp=ctx.message.created_at)
-
-  info_embed.set_author(name=f"User Info" - {member}) 
-  info_embed.set_thumbnail(url=member.avatar_url)
-  info_embed.set_footer(text=f"Requested by {ctx.author}", icon_url=ctx.author.avatar_url)
-
-  info_embed.add_field(name="Guild name:", value=member.display_name)
-  
-  await ctx.send(embed=embed)
 
 
 @bot.command()
 async def profile_in(ctx, member:discord.Member):
             embed = discord.Embed()
+            embed.set_author(name=f"User Info" - {member})  
+
             embed.set_image(url=member.avatar_url)
 
             embed.set_footer(text=f"Requested by {ctx.author}",icon_url=ctx.author.avatar_url)
