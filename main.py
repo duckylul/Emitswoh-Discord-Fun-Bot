@@ -81,7 +81,7 @@ async def noobquestion(ctx):
 
 
 @bot.command()
-async def profile_in(ctx, member:discord.Member):
+async def profile_info(ctx, member:discord.Member):
             embed = discord.Embed()
              
 
