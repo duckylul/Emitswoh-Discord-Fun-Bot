@@ -1,6 +1,6 @@
 
 #emitswoh
-from discord.ext import commands
+from discord.ext import commands, tasks
 import discord
 import string
 import sys
@@ -9,6 +9,8 @@ import random
 import os
 
 bot = commands.Bot(command_prefix="!")
+
+channel_id = 905612759998296169
 
 noob_emo = '<:noob:908513174972674068>'
 
@@ -28,7 +30,7 @@ bot.load_extension("help")
 
 #scripts
 
-noob_script = ["Am I noob?", "Am I pogs?", "me is emo?", noob_emo+'Am I cutes?']
+noob_script = ["Am I noob?", "Am I pogs?", "me is emo?", noob_emo+'Am I cutes?', "Can you give me 1 million dollars??"]
 
 answer_yes = ["pog", "yay", "_noob_", ":smiley:", "you nice nice nice"]
 
@@ -88,6 +90,19 @@ async def on_message(message:discord.Message):
            await message.channel.send(r_noob_hello)
         else:
             return       
+
+
+
+@tasks.loop(seconds=2)
+async def active_message():
+  message_channel = bot.get_channel(channel_id)
+  
+  
+  a_noob_hello = random.choice(answer_hello)
+
+  await message_channel.send(a_noob_hello)
+
+
 my_secret = os.environ['TOKEN']
 
 bot.run(my_secret)
