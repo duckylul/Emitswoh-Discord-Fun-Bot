@@ -9,9 +9,9 @@ import random
 import os
 
 
-random_messages = ['Why you bully me?', 'Talk RIGHT NOW', 'Who likes Donald Trump here??', "How many chickens would it take to kill an elephant?", "mrbeast"]
+random_messages = ['Why you bully me?', 'Talk RIGHT NOW', 'Who likes Donald Trump here??', "How many chickens would it take to kill an elephant?", "mrbeast", "DM @ilikeducks", "i AM COOL"]
 
-@tasks.loop(minutes=1.3)
+@tasks.loop(minutes=4.6)
 async def test(channel):
     n_random_messages = random.choice(random_messages)
     await channel.send(n_random_messages)
