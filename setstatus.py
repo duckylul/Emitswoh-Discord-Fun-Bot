@@ -10,6 +10,7 @@ class set_status(commands.Cog):
 		self.bot = bot
 
 	@commands.command(name="setstatus")
+    @commands.is_
 	@commands.cooldown(rate=1, per=5)
 	async def setstatus(self, ctx: commands.Context, *, text: str):
 		"""Set the bot's status."""
