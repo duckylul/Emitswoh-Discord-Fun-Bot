@@ -6,7 +6,7 @@ import sys
 import asyncio
 import random
 import os
-
+import requests
 
 random_messages = ['Why you bully me?', 'Talk RIGHT NOW', 'Who likes Donald Trump here??', "How many chickens would it take to kill an elephant?", "mrbeast", "DM @ilikeducks", "i AM COOL"]
 
@@ -15,6 +15,9 @@ async def test(channel):
     n_random_messages = random.choice(random_messages)
     await channel.send(n_random_messages)
 
+#put your bot-commands channel id here. And a extra channel for noob drops!
+comch =  912808735662035035
+dropch = 912808837080313856
 
 
 bot = commands.Bot(command_prefix="!")
