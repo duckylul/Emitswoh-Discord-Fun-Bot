@@ -24,7 +24,8 @@ bot = commands.Bot(command_prefix="!")
 
 
 noob_emo = '<:noob:908513174972674068>'
-
+aemo = noob_emo
+emo = noob_emo
 @bot.event
 async def on_ready():
     print(f"{bot.user} is ready! Go emitswohs!!")
@@ -160,26 +161,8 @@ async def on_message(message):
 		await message.channel.send(embed=he)
 
 	if message.content.startswith("!pc") and message.channel.id == comch:
-		await message.channel.send("Searching......")
-		await asyncio.sleep(5)
-		nitro_codes = [
-		    'https://discord.com/gifts/7YhkBXb7taf5QM9XpNPk73UU',
-		    'https://discord.com/gifts/6eyPp6m7NAfZ6dYn8TEZuRPG'
-		]
-
-		number = random.randint(1, 100)
-		if number == 52:
-
-			await message.channel.send("Proxy found, printing code.")
-			await asyncio.sleep(1)
-			await message.channel.send((random.choice(nitro_codes)))
-			await asyncio.sleep(0.5)
-			await message.channel.send(
-			    "Error Code: 404 Status. Try checking your internet, or try the command again."
-			)
-		else:
-
-			await message.channel.send("No proxies found. Try again in 1 hour")
+		await message.channel.send("Command soon avaliable!")
+		
 
 	if (message.content.startswith("!untilTrue")):
 		ntype = message.content[4:]
