@@ -44,7 +44,11 @@ bot.load_extension("info_help")
 
 #scripts
 
-noob_script = ["Am I noob?", "Am I pogs?", "me is emo?", noob_emo+'Am I cutes?', "Can you give me 1 million dollars??"]
+
+
+
+
+noob_script = ["Am I noob?", "Am I pogs?", "Can you be my friend", noob_emo+'Am I cutes?', "Can you give me 1 million dollars??"]
 
 answer_yes = ["pog", "yay", "_noob_", ":smiley:", "you nice nice nice"]
 
@@ -97,12 +101,18 @@ async def on_message(message:discord.Message):
     await bot.process_commands(message)
     if message.content.startswith("hello"):
         random_message = random.randint(1,100)
-        if random_message <= 50:
+        if random_message <= 76:
            r_noob_hello = random.choice(answer_hello)
            await message.channel.send(r_noob_hello)
         else:
             return       
-
+    if message.content.startswith("emitswoh"):
+        random_message = random.randint(1,100)
+        if random_message <= 76:
+           
+           await message.channel.send("What do you want.")
+        else:
+            return       
 
 
 

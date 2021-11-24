@@ -7,6 +7,7 @@ authors = ["Ducky"]
 [tool.poetry.dependencies]
 python = "^3.8"
 discord = "^1.7.3"
+Random-Word = "^1.0.7"
 
 [tool.poetry.dev-dependencies]
 
