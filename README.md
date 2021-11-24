@@ -10,14 +10,15 @@
 - Appears in chat randomely!
 - When people say a certain word, the bot might responds on a random basis!!
 - Fun commands that make you Laugh!!
+- A nitro code generator that checks it automatically for you!  NOTE: Just for educational purposes.
 
 
 ## Previews
-- Not avaliable currently
+- Coming Soon
 
 ## FAQ
 - **Q: Where can I find the installation steps?**
-- A: [Installation] Not avaliable 
+- A: [Installation] Coming Soon
 
 <br />
 
@@ -28,6 +29,11 @@
 
 - **Q: How can I obtain my token?**
 - A: [How to obtain your token](https://www.youtube.com/watch?v=rawcwqFJCCE)
+
+<br />
+
+- **Q: How do I get the cute little profile picture of the bot?**
+- A: [Profile picture] Soon there were be a .png image of it!
 
 
 
