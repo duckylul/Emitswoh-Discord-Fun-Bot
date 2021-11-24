@@ -1,0 +1,8 @@
+The following requirements needs to be intsalled
+  - discord.py
+  - requests
+ 
+  How to install?:
+
+   pip3 install discord.py
+   pip3 install requests
