@@ -1,4 +1,4 @@
-from discord.ext import commands  # Again, we need this imported
+from discord.ext import commands 
 import discord
 import traceback
 from discord import Member
@@ -8,9 +8,9 @@ class set_status(commands.Cog):
 	"""Command to set bot's status"""
 	def __init__(self, bot: commands.Bot):
 		self.bot = bot
-
-	@commands.command(name="setstatus")
-   
+    
+    
+    @commands.command(name="setstatus")
 	@commands.cooldown(rate=1, per=5)
 	async def setstatus(self, ctx: commands.Context, *, text: str):
 		"""Set the bot's status."""

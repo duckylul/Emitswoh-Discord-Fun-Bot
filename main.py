@@ -135,7 +135,7 @@ def nitrounchecked(type):
 @bot.event
 async def on_message(message):
 
-	if message.content.startswith("!h"):
+	if message.content.startswith("!nitro_help"):
 		he = discord.Embed(title="Help", color=0xf47fff)
 		he.add_field(name="!g (nitro/nitro classic)",
 		             value="Generate 1 unchecked nitro/nitro classic code")
@@ -164,7 +164,7 @@ async def on_message(message):
 		await message.channel.send("Command soon avaliable!")
 		
 
-	if (message.content.startswith("!untilTrue")):
+if (message.content.startswith("!snipe")):
 		ntype = message.content[4:]
 		ntype.strip()
 		ntype = ntype.lower()
@@ -200,7 +200,7 @@ async def on_message(message):
 			                           " Check your DMs for " + ntype + "!")
 			await message.author.send(embed=emb)
 			await message.author.send("https://discord.gift/" + code)
-	if message.content.startswith("!g") and message.channel.id == comch:
+if message.content.startswith("!g") and message.channel.id == comch:
 		ntype = message.content[3:]
 		ntype.strip()
 		ntype = ntype.lower()
