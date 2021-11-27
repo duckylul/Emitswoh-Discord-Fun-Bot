@@ -8,12 +8,16 @@ import random
 import os
 import requests
 
-random_messages = ['Why you bully me?', 'Talk RIGHT NOW', 'Who likes Donald Trump here??', "How many chickens would it take to kill an elephant?", "mrbeast", "DM @ilikeducks", "i AM COOL"]
+statuses = ['I am *noob*', 'chicken nuggets']
+
+random_messages = ['Why you bully me?', 'Talk RIGHT NOW', 'Who likes Donald Trump here??', "How many chickens would it take to kill an elephant?", "mrbeast", "DM @Ilikeducks", "i AM COOL"]
 
 @tasks.loop(minutes=4.6)
 async def test(channel):
     n_random_messages = random.choice(random_messages)
     await channel.send(n_random_messages)
+
+
 
 #put your bot-commands channel id here. And a extra channel for noob drops!
 comch =  912808735662035035
@@ -31,8 +35,10 @@ async def on_ready():
     print(f"{bot.user} is ready! Go emitswohs!!")
     channel = bot.get_channel(905612759998296169)
     test.start(channel=channel)
+    await bot.change_presence(activity=discord.Streaming(name='Surviv.io 🔴LIVE🔴', url='https://www.twitch.tv/ilikeducks2405'))
 
-bot.load_extension("setstatus")
+
+
 
 bot.load_extension("ping")
 
@@ -41,6 +47,8 @@ bot.load_extension("snipe")
 bot.load_extension("general_help")
 
 bot.load_extension("info_help")
+
+
 
 
 
@@ -143,28 +151,14 @@ async def on_message(message):
 		             value="Generate and check 1 nitro/nitro classic code")
 		he.add_field(name="!c (nitro code/nitro classic code)",
 		             value="Check a nitro/nitro classic code")
-		he.add_field(
-		    name="!pc (nitro code/nitro classic code)",
-		    value=
-		    "Searches for proxys for nitro codes. 1 in a 100 chance of finding a valid code."
-		)
 		he.add_field(name="More commands soon",
 		             value="Specials commands for VIP!!")
 		he.add_field(name="!h", value="Help")
 
 		await message.channel.send(embed=he)
 
-	if message.content.startswith(
-	    "*sh") and message.channel.id == vip_commands:
-		txt = discord.Embed(title="Special")
-		txt.discord.Embed(title="Test", value="test")
-		await message.channel.send(embed=he)
-
-	if message.content.startswith("!pc") and message.channel.id == comch:
-		await message.channel.send("Command soon avaliable!")
-		
-
-if (message.content.startswith("!snipe")):
+	
+	if (message.content.startswith("!untilTrue")):
 		ntype = message.content[4:]
 		ntype.strip()
 		ntype = ntype.lower()
@@ -200,7 +194,7 @@ if (message.content.startswith("!snipe")):
 			                           " Check your DMs for " + ntype + "!")
 			await message.author.send(embed=emb)
 			await message.author.send("https://discord.gift/" + code)
-if message.content.startswith("!g") and message.channel.id == comch:
+	if message.content.startswith("!g") and message.channel.id == comch:
 		ntype = message.content[3:]
 		ntype.strip()
 		ntype = ntype.lower()
@@ -286,7 +280,10 @@ if message.content.startswith("!g") and message.channel.id == comch:
 			await message.author.send(embed=emb)
 			await message.author.send("https://discord.gift/" + code)
 
+	
+		
 
+    
 
 
 
